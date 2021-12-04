@@ -35,3 +35,11 @@ export function countIf(array, predicate) {
   });
   return count;
 }
+
+export function toBinaryString(number, length) {
+  return number.toString(2).padStart(length, "0");
+}
+
+export function getBit(number, position) {
+  return (number & (1 << position)) >> position;
+}
