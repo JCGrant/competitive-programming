@@ -43,3 +43,7 @@ export function toBinaryString(number, length) {
 export function getBit(number, position) {
   return (number & (1 << position)) >> position;
 }
+
+export function rotateArrayLeft(array) {
+  return array.map((_, i) => array[i + 1] ?? array[0]);
+}
